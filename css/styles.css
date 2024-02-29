@@ -179,12 +179,27 @@ section {
     text-decoration: none;
     font-style: normal;
     padding: 24px 0;
+    position: relative;
+}
+
+.line {
+    background-color: #404bbf;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    top: 69px;
+    display: none;
 }
 
 .link:hover,
 .link:focus {
     color: #404bbf;
-    border-bottom: 2px solid #404bbf;
+}
+
+.link:hover + .line,
+.link:focus + .line {
+    display: block;
 }
 
 .link:active {
@@ -240,11 +255,17 @@ section {
     /* background-color: #2e2f42; */
     text-align: center;
     padding: 188px 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 163, 0.7),
+        rgba(79, 2, 180, 0.7)
+    );
 }
 
 .hero {
     max-width: 1440px;
     position: absolute;
+    justify-content: center;
     top: 72px;
 }
 
@@ -349,27 +370,20 @@ ul p {
 .icon-set-sm {
     display: flex;
     gap: 24px;
-    margin: 8px 16px 0 16px;
+    margin: 9px 16px 0px 16px;
+    /* margin-right: 540px:  */
 }
 
 .icon {
-    display: inline-block;
+    /* display: inline-block; */
     background-color: #4d5ae5;
-    color: white;
-}
-
-.sm {
-    /* width: 12px;
-    height: 12px; */
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.sm-footer {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+.sm-footer-set {
+    margin-left: 540px;
 }
 
 .icon.sm:hover,
