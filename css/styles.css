@@ -115,11 +115,11 @@ section {
 
 .portfolio-image {
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
-.portfolio-media .inner-text:hover,
-.portfolio-media .inner-text:focus {
+.portfolio-media:hover .inner-text,
+.portfolio-media:focus .inner-text {
     transform: translateY(0%);
 }
 
@@ -293,13 +293,7 @@ section {
 }
 
 .blue-box {
-    /* background-image: linear-gradient(
-            rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)
-        ),
-        url(./images/heroimage.jpg); */
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-    /* background-image: url(./images/heroimage.jpg); */
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center;
