@@ -84,6 +84,7 @@ section {
 
 .portfolio-media {
     width: calc((100% - 48px) / 3);
+    box-shadow: none;
     transition: box-shadow;
     position: relative;
 }
@@ -93,20 +94,11 @@ section {
         0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-media .inner-text:hover {
-    transform: translateY(0);
-}
-
-.portfolio-image {
-    position: relative;
-}
-
 .description-text {
     margin-bottom: 8px;
 }
 
 .inner-text {
-    overflow: hidden;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -114,10 +106,21 @@ section {
     background-color: #4d5ae5;
     height: 100%;
     width: 100%;
-    transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 40px 32px 0 32px;
+    transform: translateY(100%);
+    padding: 40px 32px;
     position: absolute;
+    top: 0;
+}
+
+.portfolio-image {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.portfolio-media .inner-text:hover,
+.portfolio-media .inner-text:focus {
+    transform: translateY(0%);
 }
 
 .button-click {
