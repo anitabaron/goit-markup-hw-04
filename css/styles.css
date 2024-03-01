@@ -130,7 +130,7 @@ section {
     color: #404bbf;
 }
 
-.current:active::after {
+.current::after {
     content: "";
     background-color: #404bbf;
     width: 100%;
